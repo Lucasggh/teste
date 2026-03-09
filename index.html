@@ -3,83 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Açaí na Van | Energia em Movimento</title>
+    <title>Vançaí Premium | Açaí na Van</title>
     <meta
       name="description"
-      content="Landing page moderna da loja de sorvete de açaí sobre rodas, com cardápio, história e localização."
+      content="Landing page moderna da Vançaí Premium: açaí artesanal servido em uma van, com cardápio, história e contato."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="animated-bg" aria-hidden="true"></div>
-    <div class="bg-overlay" aria-hidden="true"></div>
+    <div class="ambient-bg" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
 
-    <main class="site-shell">
-      <div class="glass-frame">
-        <div class="scroll-track" id="scroll-track">
-          <section class="panel hero reveal" id="home">
-            <p class="eyebrow">Açaí Artesanal Sobre Rodas</p>
-            <h1>Açaí na Van</h1>
-            <p class="lead">
-              Refresque seu dia com o sabor intenso do açaí premium, servido na hora com toppings incríveis.
-            </p>
-            <a class="btn-primary" href="#cardapio">Ver cardápio</a>
-          </section>
+    <main class="page-wrap">
+      <div class="app-shell" id="app-shell">
+        <header class="topbar">
+          <div class="brand">
+            <span class="logo-dot"></span>
+            <strong>Vançaí Premium</strong>
+          </div>
+          <a href="#cardapio" class="top-cta">Ver cardápio</a>
+        </header>
 
-          <section class="panel reveal" id="sobre">
-            <h2>Sobre nós</h2>
-            <p>
-              Nossa van nasceu do sonho de levar energia e sabor por toda a cidade. Começamos em feiras locais e hoje
-              seguimos espalhando uma experiência cremosa, gelada e cheia de personalidade.
-            </p>
-            <p>
-              Nossa missão é simples: entregar a melhor combinação de açaí, qualidade e atendimento acolhedor em cada
-              parada.
-            </p>
-          </section>
+        <section class="section hero reveal" id="home">
+          <p class="kicker">Açaí na Van • experiência sobre rodas</p>
+          <h1>O sabor premium do açaí, onde a cidade estiver.</h1>
+          <p class="hero-copy">
+            Uma loja móvel com receitas autorais, ingredientes selecionados e montagem na hora para transformar sua pausa
+            em um momento memorável.
+          </p>
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-primary">Conhecer combinações</a>
+            <a href="#contato" class="btn btn-ghost">Onde estamos hoje</a>
+          </div>
+        </section>
 
-          <section class="panel reveal" id="cardapio">
-            <h2>Cardápio</h2>
-            <div class="menu-grid">
-              <article class="menu-card">
-                <h3>Clássico Amazônico</h3>
-                <p>Açaí puro, banana, granola e mel.</p>
-              </article>
-              <article class="menu-card">
-                <h3>Tropical Power</h3>
-                <p>Açaí, morango, manga e leite em pó.</p>
-              </article>
-              <article class="menu-card">
-                <h3>Combo da Van</h3>
-                <p>Açaí 500ml + topping duplo + água de coco.</p>
-              </article>
-              <article class="menu-card">
-                <h3>Choco Crunch</h3>
-                <p>Açaí, creme de avelã, paçoca e castanhas.</p>
-              </article>
-            </div>
-          </section>
+        <section class="section reveal" id="sobre">
+          <div class="section-head">
+            <p class="tag">Sobre nós</p>
+            <h2>Uma marca urbana com alma amazônica.</h2>
+          </div>
+          <p>
+            A Vançaí Premium nasceu da ideia de unir mobilidade, gastronomia e lifestyle. Nossa van percorre pontos
+            estratégicos com uma operação ágil e um padrão de qualidade que lembra cafeteria de marca global.
+          </p>
+          <p>
+            Trabalhamos com açaí de origem controlada e uma curadoria de toppings para criar texturas, frescor e energia
+            em cada copo.
+          </p>
+        </section>
 
-          <section class="panel reveal" id="contato">
-            <h2>Localização & Contato</h2>
-            <p>
-              Estamos sempre em movimento! Nos encontre de terça a domingo, das 16h às 23h, na região central e nos
-              principais eventos gastronômicos da cidade.
-            </p>
-            <p>
-              Acompanhe nosso roteiro diário nas redes sociais e venha viver a experiência do açaí na van.
-            </p>
-            <a class="btn-secondary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"
-              >Falar no WhatsApp</a
+        <section class="section reveal" id="cardapio">
+          <div class="section-head">
+            <p class="tag">Cardápio</p>
+            <h2>Combinações pensadas para surpreender.</h2>
+          </div>
+
+          <div class="cards-grid">
+            <article class="product-card">
+              <h3>Signature Roxo</h3>
+              <p>Açaí cremoso + blueberry + granola de castanhas + mel de florada.</p>
+              <span>R$ 24</span>
+            </article>
+            <article class="product-card">
+              <h3>Pink Energy</h3>
+              <p>Açaí + morango + nibs de cacau + creme de coco.</p>
+              <span>R$ 22</span>
+            </article>
+            <article class="product-card">
+              <h3>Combo Street</h3>
+              <p>Açaí 500ml + topping premium + bebida funcional gelada.</p>
+              <span>R$ 32</span>
+            </article>
+            <article class="product-card">
+              <h3>Zero Culpa</h3>
+              <p>Açaí sem xarope + frutas frescas + chia + pasta de amendoim.</p>
+              <span>R$ 23</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="contato">
+          <div class="section-head">
+            <p class="tag">Localização & contato</p>
+            <h2>Estamos sempre por perto.</h2>
+          </div>
+          <p>
+            Terça a domingo, das 16h às 23h. Atualizamos nossa rota diariamente no Instagram e no WhatsApp para você nos
+            encontrar com facilidade.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"
+              >Pedir no WhatsApp</a
             >
-          </section>
-        </div>
+            <a class="btn btn-ghost" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+              >Acompanhar roteiro</a
+            >
+          </div>
+        </section>
       </div>
     </main>
 

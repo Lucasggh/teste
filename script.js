@@ -1,51 +1,5 @@
-const track = document.getElementById('scroll-track');
-const sections = [...document.querySelectorAll('.panel')];
-let currentSection = 0;
-let locked = false;
-
-const clampIndex = (index) => Math.max(0, Math.min(index, sections.length - 1));
-
-const goToSection = (index) => {
-  const targetIndex = clampIndex(index);
-  const target = sections[targetIndex];
-
-  if (!target) return;
-
-  locked = true;
-  currentSection = targetIndex;
-  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  setTimeout(() => {
-    locked = false;
-  }, 650);
-};
-
-track.addEventListener(
-  'wheel',
-  (event) => {
-    event.preventDefault();
-
-    if (locked) return;
-
-    const direction = Math.sign(event.deltaY);
-    if (direction === 0) return;
-
-    goToSection(currentSection + direction);
-  },
-  { passive: false }
-);
-
-track.addEventListener('scroll', () => {
-  const viewportCenter = track.scrollTop + track.clientHeight / 2;
-
-  sections.forEach((section, index) => {
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
-    if (viewportCenter >= sectionTop && viewportCenter < sectionBottom) {
-      currentSection = index;
-    }
-  });
-});
+const shell = document.getElementById('app-shell');
+const revealElements = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -55,17 +9,20 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.25, root: track }
+  { threshold: 0.2, root: shell }
 );
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+revealElements.forEach((element) => observer.observe(element));
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (event) => {
     event.preventDefault();
     const target = document.querySelector(anchor.getAttribute('href'));
     if (!target) return;
-    const index = sections.indexOf(target);
-    goToSection(index);
+
+    shell.scrollTo({
+      top: target.offsetTop - 64,
+      behavior: 'smooth'
+    });
   });
 });
